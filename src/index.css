@@ -1,0 +1,164 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #333333;
+  height: 100%;
+  color: white;
+  font-family: Arial Rounded MT;
+}
+
+#root{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.text-gradient{
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.grad-insta{
+	background-image: linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%);
+}
+
+h1{
+	font-size: 4.2rem;
+	text-align: center;
+}
+
+.container{
+	display: flex;
+	flex-direction: column;
+	padding: 4px;
+	width: auto;
+	max-width: 90vw;
+	border: 0.3rem solid #99ff99;
+	background:  #333333;
+	border-radius: 0.6rem;
+	font-size: 2.1rem;
+}
+
+.steps-box{
+	background-color: #ccffff;
+	padding: 0.4rem;
+	width: 96%;
+	border-radius: 0.6rem;
+	color: black;
+}
+
+.steps-box:hover{
+	color: #ff8c1a;
+}
+
+.pp{
+	text-align: right;
+	padding: 0;
+	margin: 0;
+	overflow: auto;
+}
+
+p{
+	text-align: right;
+	padding: 0;
+	margin: 0;
+	overflow: auto;
+}
+
+.output-box{
+	margin-top: 0.3rem;
+	background-color: #ccffff;
+	color: black;
+	padding: 0.4rem;
+	width: 96%;
+	border-radius: 0.6rem;
+}
+
+.output-box:hover{
+	color: #ff0000;
+}
+
+.top-part{
+	display: grid;
+	margin-top: 0.3rem;
+	grid-template-columns: 4fr 2fr 2fr;
+	grid-column-gap: 0.3rem;
+}
+
+.ac{
+	background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+	border-radius: 0.6rem;
+	padding: 0.2rem;
+	text-align: center;
+	cursor: pointer;
+}
+
+.ac:hover{
+	color: #333333;
+}
+
+.division{
+	background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	border-radius: 0.6rem;
+	padding: 0.2rem;
+	text-align: center;
+	cursor: pointer;
+}
+
+.division:hover{
+	color: #333333;
+}
+
+.multiplication{
+	background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	border-radius: 0.6rem;
+	padding: 0.2rem;
+	text-align: center;
+	cursor: pointer;
+}
+
+.multiplication:hover{
+	color: #333333;
+}
+
+.digits-box{
+	margin-top: 0.3rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-column-gap: 0.3rem;
+	grid-row-gap: 0.3rem;
+}
+
+.digit{
+	background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+	border-radius: 0.6rem;
+	padding: 0.2rem;
+	text-align: center;
+	cursor: pointer;
+}
+
+.digit:hover{
+	color: #333333;
+}
+
+.bottom-part{
+	margin-top: 0.3rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 0.3rem;
+	grid-row-gap: 0.3rem;
+}
+
+.equal-to{
+	background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+	border-radius: 0.6rem;
+	padding: 0.2rem;
+	text-align: center;
+}
+
+.equal-to:hover{
+	color: #333333;
+}
