@@ -9,7 +9,15 @@ function App() {
   const [prevValue, setPrevValue] = useState("0");
   const [lastOperator, setLastOperator] = useState("");
 
+  function playAudio(key){
+    let audio = document.getElementById(key);
+    audio.currentTime = 0;
+    audio.volume = 0.5;
+    audio.play();
+  }
+
   function clearAll(){
+    playAudio("cr");
     setExpression("");
     setCurrentValue("0");
     setPrevValue("0");
@@ -17,6 +25,7 @@ function App() {
   }
 
   function evaluate(){
+    playAudio("=");
     if (expression.length === 0 || expression === '-')
       return;
     let result = eval(expression.replaceAll('--', '+'));
@@ -29,6 +38,7 @@ function App() {
   }
 
   function handleZero(val){
+    playAudio(val);
     setLastOperator("");
     if (prevValue.length===1 && prevValue === val)
       return;
@@ -38,6 +48,7 @@ function App() {
   }
 
   function handleNumber(val){
+    playAudio(val);
     setLastOperator("");
     setPrevValue(prevValue === "0" ? val : prevValue+val);
     setCurrentValue(prevValue === "0" ? val : prevValue+val);
@@ -45,6 +56,7 @@ function App() {
   }
 
   function handleDecimal(val){
+    playAudio(val);
     setCurrentValue(prevValue);
     setLastOperator("");
     if (prevValue === "0"){
@@ -62,6 +74,7 @@ function App() {
   }
 
   function handleOperator(val){
+    playAudio(val);
     setCurrentValue(val);
     setPrevValue("0");
     if (expression.length === 0){
